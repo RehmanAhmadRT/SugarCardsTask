@@ -1,0 +1,42 @@
+<style>
+.card{
+  background-color: #ff8000;
+  position:relative;
+  float: left;
+  height: 100px;
+  width: 225px;
+  padding: 3px;
+  padding-left: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: left;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    padding-left: -10;
+    margin: 1em 0;
+    padding: 0;
+}
+</style>
+
+{{log "in hbs"}}
+{{log val}}
+ <!-- {{#each val.models}}
+  {{log this}}
+  <div class="card">
+      <h5>{{attributes.name}}</h5>
+      <hr/>
+      <h6>{{attributes.description}}</h6>
+  </div>
+ {{/each}} -->
+{{#each val.records}}
+  {{log this}}
+    <div class="card">
+      <h5>{{name}}</h5>
+      <hr/>
+      <h6>{{description}}</h6>
+    </div>
+{{/each}}
